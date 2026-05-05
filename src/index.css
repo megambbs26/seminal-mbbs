@@ -363,9 +363,10 @@ img {
 
 .form-card-top {
   position: relative;
-  min-height: 208px;
-  padding: 22px;
+  min-height: 250px;
+  padding: 28px;
   overflow: hidden;
+  background: var(--deep-navy);
 }
 
 .form-card-top > .emblem {
@@ -376,11 +377,11 @@ img {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 8px;
-  width: 46%;
-  margin-top: 12px;
-  color: #dce7f5;
-  font-size: 13px;
+  gap: 12px;
+  width: 43%;
+  margin-top: 18px;
+  color: #edf4ff;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -396,11 +397,11 @@ img {
 
 .gold-arc {
   position: absolute;
-  top: -72px;
-  right: -80px;
-  width: 292px;
-  height: 292px;
-  border: 18px solid var(--gold);
+  top: -58px;
+  right: -62px;
+  width: 248px;
+  height: 248px;
+  border: 15px solid var(--gold);
   border-left-color: transparent;
   border-bottom-color: transparent;
   border-radius: 999px;
@@ -409,49 +410,51 @@ img {
 
 .form-card-top img {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
+  right: 18px;
+  top: 18px;
+  width: 47%;
+  height: 214px;
   object-fit: cover;
-  border-radius: 0 24px 0 60px;
+  object-position: 64% center;
+  border-radius: 0 18px 0 58px;
   z-index: 1;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
 
 .registration-form {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 22px;
-  padding: 30px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
 
 .registration-form-dark {
-  margin: -32px 16px 16px;
+  margin: 0 16px 16px;
   position: relative;
   z-index: 4;
   border-radius: 20px;
-  padding: 24px;
+  padding: 22px;
   box-shadow: none;
 }
 
 .form-heading {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .form-heading h3 {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: var(--deep-navy);
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.15;
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 14px;
+  gap: 13px 12px;
 }
 
 .form-field {
@@ -480,8 +483,8 @@ img {
   background: #fff;
   color: var(--text);
   outline: none;
-  padding: 12px 14px;
-  font-size: 14px;
+  padding: 11px 13px;
+  font-size: 13px;
   font-weight: 600;
   transition: all 0.2s ease;
 }
@@ -504,11 +507,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 14px;
+  padding: 11px 13px;
   background: #fff;
   border: 1.5px solid #e5eaf2;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--muted);
   transition: all 0.2s ease;
@@ -609,8 +612,8 @@ img {
 .form-submit {
   width: 100%;
   margin-top: 10px;
-  min-height: 52px;
-  font-size: 16px;
+  min-height: 48px;
+  font-size: 15px;
 }
 
 .form-note {
@@ -1775,7 +1778,7 @@ img {
   }
 
   .form-card-top {
-    min-height: 170px;
+    min-height: 190px;
     padding: 18px;
   }
 
@@ -1791,8 +1794,8 @@ img {
   }
 
   .form-card-top img {
-    width: 49%;
-    height: 142px;
+    width: 48%;
+    height: 154px;
     right: 12px;
     top: 14px;
     border-radius: 0 15px 0 42px;
@@ -1807,7 +1810,7 @@ img {
   }
 
   .registration-form-dark {
-    margin: -22px 10px 10px;
+    margin: 0 10px 10px;
     padding: 16px;
   }
 
