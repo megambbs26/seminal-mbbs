@@ -195,6 +195,7 @@ function HeroSection() {
             <img
               src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=620&q=80"
               alt="Medical students studying"
+              fetchPriority="high"
             />
           </div>
           <RegistrationForm variant="dark" />
@@ -290,7 +291,7 @@ function DoctorProfiles() {
         <div className="doctor-row">
           {doctors.map((doctor) => (
             <motion.article className="doctor-card" key={doctor.name} whileHover={{ y: -5 }}>
-              <div className="doctor-image"><img src={doctor.img} alt={doctor.name} /></div>
+              <div className="doctor-image"><img src={doctor.img} alt={doctor.name} loading="lazy" /></div>
               <h3>{doctor.name}</h3>
               <div className="country"><span>{doctor.flag}</span>{doctor.country}</div>
               <p>{doctor.role}</p>
@@ -318,7 +319,7 @@ function VenueCards() {
           {venues.map((venue) => (
             <article className="venue-card" key={venue.city}>
               <div className="venue-image">
-                <img src={venue.img} alt={`${venue.city} seminar venue`} />
+                <img src={venue.img} alt={`${venue.city} seminar venue`} loading="lazy" />
                 <span>{venue.city}</span>
               </div>
               <div className="venue-content">
@@ -356,7 +357,7 @@ function PosterSection() {
           {posters.map((poster) => (
             <motion.div className="poster-card" key={poster.city} whileHover={{ scale: 1.02 }}>
               <div className="poster-image">
-                <img src={poster.img} alt={`MBBS Seminar Poster ${poster.city}`} />
+                <img src={poster.img} alt={`MBBS Seminar Poster ${poster.city}`} loading="lazy" />
               </div>
               <div className="poster-info">
                 <h3>{poster.city} Seminar</h3>
@@ -443,7 +444,10 @@ function FAQAccordion() {
             const open = openIndex === index;
             return (
               <div className="faq-item" key={question}>
-                <button onClick={() => setOpenIndex(open ? -1 : index)}>
+                <button 
+                  onClick={() => setOpenIndex(open ? -1 : index)}
+                  aria-expanded={open}
+                >
                   {question}
                   <ChevronDown size={18} className={open ? 'rotate' : ''} />
                 </button>
@@ -487,8 +491,8 @@ function FinalCTA() {
           </div>
         </div>
         <div className="final-doctors">
-          <img src="/images/dr-komal-r.jpeg" alt="Dr. Komal R" />
-          <img src="/images/dr-isha-jadon.jpeg" alt="Dr. Isha Jadon" />
+          <img src="/images/dr-komal-r.jpeg" alt="Dr. Komal R" loading="lazy" />
+          <img src="/images/dr-isha-jadon.jpeg" alt="Dr. Isha Jadon" loading="lazy" />
         </div>
       </div>
     </section>
