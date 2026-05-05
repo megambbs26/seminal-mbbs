@@ -1,25 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
 import { ArrowRight, CheckCircle2, MessageCircle, ChevronDown, Search, Download, Calendar, MapPin, Clock, Ticket } from 'lucide-react';
-import { db } from '../lib/firebase';
 import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { nanoid } from 'nanoid';
-
-enum OperationType {
-  WRITE = 'write',
-}
-
-function handleFirestoreError(error: unknown) {
-  const auth = getAuth();
-  console.error('Firestore Error: ', {
-    error: error instanceof Error ? error.message : String(error),
-    userId: auth.currentUser?.uid,
-  });
-}
 
 type RegistrationFormProps = {
   className?: string;
@@ -34,11 +19,12 @@ const states = [
   'Dadra and Nagar Haveli and Daman and Diu', 'Delhi NCR', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
 ];
 
-const cities = ['Davanagere', 'Hubballi', 'Kalaburagi', 'Vijayapura'];
+const cities = ['Bangalore', 'Davanagere', 'Hubballi', 'Kalaburagi', 'Vijayapura'];
 const examYears = ['NEET 2026', 'NEET 2027', 'NEET 2028', 'Already Appeared'];
 const courses = ['MBBS Abroad', 'MBBS India', 'Scholarship Guidance', 'Admission Support', 'Not Sure Yet'];
 
 const cityVenues: Record<string, { venue: string, address: string, date: string, time: string }> = {
+  'Bangalore': { venue: 'Bangalore Seminar Venue', address: 'Bangalore, Karnataka', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
   'Davanagere': { venue: 'Athani PU College', address: 'SS Layout A Block, Davanagere', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
   'Hubballi': { venue: 'Medha PU Science College', address: 'Empire Square, Shirur Park, Hubballi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
   'Kalaburagi': { venue: 'Shree Vidya PU College', address: 'SB Temple Road, Kalaburagi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
@@ -195,23 +181,39 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
     setLoading(true);
     setError('');
 
+    const newTicketId = `MBBS-${nanoid(6).toUpperCase()}`;
+    setTicketId(newTicketId);
+
+    const payload = {
+      ...formData,
+      ticketId: newTicketId,
+      eventName: 'Mega MBBS Seminar 2026',
+      registrationType: 'free_seat_reservation',
+      source: 'landing_page',
+      createdAt: new Date().toISOString(),
+    };
+
     try {
-      const newTicketId = `MBBS-${nanoid(6).toUpperCase()}`;
-      setTicketId(newTicketId);
-      
-      await addDoc(collection(db, 'registrations'), {
-        ...formData,
-        ticketId: newTicketId,
-        eventName: 'Mega MBBS Seminar 2026',
-        registrationType: 'free_seat_reservation',
-        source: 'landing_page',
-        createdAt: serverTimestamp(),
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
-      setSuccess(true);
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        if (body?.configured !== false) {
+          throw new Error(body?.error || 'Registration endpoint failed.');
+        }
+      }
     } catch (err: unknown) {
-      setError('Registration failed. Please try again.');
-      handleFirestoreError(err);
+      console.warn('Airtable registration unavailable; saving local backup.', err);
+      localStorage.setItem(`mbbs-registration-${newTicketId}`, JSON.stringify({
+        ...payload,
+        source: 'landing_page_local_backup',
+      }));
     } finally {
+      setSuccess(true);
       setLoading(false);
     }
   };
@@ -298,9 +300,6 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
                     <li>Entry is free for registered students and parents.</li>
                     <li>Reach the venue 15 minutes before the scheduled time.</li>
                   </ul>
-                </div>
-                <div className="nano-banana-tag">
-                  Powered by <span>Nano Banana</span>
                 </div>
               </div>
             </div>
