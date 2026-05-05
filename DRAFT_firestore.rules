@@ -1,0 +1,41 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Validation Helpers
+    function isValidId(id) { 
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); 
+    }
+    function incoming() { return request.resource.data; }
+    
+    // Schema Validation for Registration Entity
+    function isValidRegistration(data) {
+      return data.keys().hasAll(['studentName', 'phoneNumber', 'email', 'neetStatus', 'createdAt']) 
+        && data.keys().size() <= 6
+        && data.studentName is string && data.studentName.size() > 0 && data.studentName.size() <= 150
+        && data.phoneNumber is string && data.phoneNumber.size() > 0 && data.phoneNumber.size() <= 30
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 150
+        && data.neetStatus is string && data.neetStatus.size() > 0 && data.neetStatus.size() <= 50
+        && data.createdAt == request.time
+        && (
+          !('preferredCountry' in data.keys()) 
+          || (data.preferredCountry is string && data.preferredCountry.size() <= 100)
+        );
+    }
+    
+    // Registrations Collection
+    match /registrations/{registrationId} {
+      // Allow anonymous creation of registrations if schema matches
+      allow create: if isValidId(registrationId) && isValidRegistration(incoming());
+      
+      // No reads or updates allowed for public (only Admins in Firebase console can read)
+      allow read, update, delete: if false;
+    }
+  }
+}

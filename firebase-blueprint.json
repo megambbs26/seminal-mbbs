@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "Registration": {
+      "title": "Registration",
+      "description": "A lead registration for the MBBS seminar.",
+      "type": "object",
+      "properties": {
+        "studentName": {
+          "type": "string",
+          "description": "Name of the student."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Phone number of the student or parent."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the student."
+        },
+        "neetStatus": {
+          "type": "string",
+          "description": "Status of NEET preparation (Preparing / Appeared / Not Yet)."
+        },
+        "preferredCountry": {
+          "type": "string",
+          "description": "Preferred country for MBBS."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "timestamp",
+          "description": "Creation timestamp."
+        }
+      },
+      "required": [
+        "studentName",
+        "phoneNumber",
+        "email",
+        "neetStatus",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/entities/Registration"
+      },
+      "description": "Stores user registrations for the seminar."
+    }
+  }
+}
