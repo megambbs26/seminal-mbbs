@@ -24,7 +24,7 @@ export default defineConfig(({mode}) => {
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['react', 'react-dom', 'motion', 'lucide-react', 'firebase', 'jspdf', 'html2canvas'],
+            vendor: ['react', 'react-dom', 'motion', 'lucide-react', 'jspdf', 'html2canvas'],
           },
         },
       },
