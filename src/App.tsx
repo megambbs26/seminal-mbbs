@@ -193,7 +193,7 @@ function HeroSection() {
             </div>
             <div className="gold-arc" />
             <img
-              src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=620&q=80"
+              src="/images/hero-medical-students.png"
               alt="Medical students studying"
               fetchPriority="high"
             />
@@ -305,10 +305,10 @@ function DoctorProfiles() {
 
 function VenueCards() {
   const venues = [
-    { city: 'Davanagere', venue: 'Athani PU College', address: 'SS Layout A Block, Davanagere', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=520&q=80' },
-    { city: 'Hubballi', venue: 'Medha PU Science College', address: 'Empire Square, Shirur Park, Hubballi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: 'https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&w=520&q=80' },
-    { city: 'Kalaburagi', venue: 'Shree Vidya PU College', address: 'SB Temple Road, Kalaburagi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=520&q=80' },
-    { city: 'Vijayapura', venue: 'Chetana PU College', address: 'Gangapuram Colony, Vijayapura', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: 'https://images.unsplash.com/photo-1523050335102-c3250615e21c?auto=format&fit=crop&w=520&q=80' },
+    { city: 'Davanagere', venue: 'Athani PU College', address: 'SS Layout A Block, Davanagere', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-davanagere-athani-college.png' },
+    { city: 'Hubballi', venue: 'Medha PU Science College', address: 'Empire Square, Shirur Park, Hubballi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-hubballi-medha-college.png' },
+    { city: 'Kalaburagi', venue: 'Shree Vidya PU College', address: 'SB Temple Road, Kalaburagi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-kalaburagi-shree-vidya.png' },
+    { city: 'Vijayapura', venue: 'Chetana PU College', address: 'Gangapuram Colony, Vijayapura', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-vijayapura-chetana-college.png' },
   ];
 
   return (
