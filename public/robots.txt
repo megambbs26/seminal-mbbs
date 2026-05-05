@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://megambbsseminar.com/sitemap.xml
