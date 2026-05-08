@@ -506,11 +506,10 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        <div>
+        <div className="footer-brand">
           <MedicalEmblem className="emblem-on-dark" />
-          <p>
-            This seminar provides education counselling for students aspiring to study MBBS. Final admission depends
-            on student eligibility, documentation, university rules, and seat availability.
+          <p className="footer-disclaimer">
+            <strong>Disclaimer:</strong> This seminar is for education counselling only. We do not provide direct medical advice or guarantee admissions. Final admission depends on student eligibility, NEET scores, documentation, university rules, and seat availability in India or Abroad.
           </p>
         </div>
         <div>
@@ -532,9 +531,31 @@ function Footer() {
           </div>
         </div>
       </div>
+      
+      <div className="container footer-compliance">
+        <div className="compliance-text">
+          <p>
+            <strong>Data Privacy & Ad Disclosure:</strong> We use cookies and tracking technologies (Google Analytics & Meta Pixel) to improve your experience and show relevant ads. By using this site or submitting the form, you agree to our collection of data as per our Privacy Policy. You can opt-out of interest-based advertising via your browser settings or <a href="https://www.aboutads.info/choices" target="_blank" rel="noreferrer">AdChoices</a>.
+          </p>
+          <p>
+            This site is not a part of the Meta website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Meta in any way. FACEBOOK is a trademark of META Platforms, Inc.
+          </p>
+        </div>
+      </div>
+
       <div className="container footer-bottom">
-        <span>© 2026 All Rights Reserved.</span>
-        <span>Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;Terms & Conditions</span>
+        <div className="footer-copyright">
+          © 2026 Mega MBBS Seminar. All Rights Reserved.
+        </div>
+        <div className="footer-legal">
+          <a href="#home">Privacy Policy</a>
+          <span className="sep">|</span>
+          <a href="#home">Terms & Conditions</a>
+          <span className="sep">|</span>
+          <a href="#home">Cookie Policy</a>
+          <span className="sep">|</span>
+          <a href="#home">Disclaimer</a>
+        </div>
       </div>
     </footer>
   );
