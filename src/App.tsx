@@ -157,6 +157,7 @@ function HeroSection() {
               <MessageCircle size={18} /> Chat on WhatsApp
             </a>
           </div>
+          <p className="cta-note">By clicking, you agree to our Privacy Policy & data collection via WhatsApp.</p>
 
           <div className="trust-row">
             {trustItems.map(({ icon: Icon, label }) => (
@@ -489,6 +490,7 @@ function FinalCTA() {
               <Phone size={18} /> Call Now
             </a>
           </div>
+          <p className="cta-note cta-note-dark">By clicking, you agree to our Privacy Policy & data collection via WhatsApp.</p>
         </div>
         <div className="final-doctors">
           <img src="/images/dr-komal-r.jpeg" alt="Dr. Komal R" loading="lazy" />
@@ -535,10 +537,13 @@ function Footer() {
       <div className="container footer-compliance">
         <div className="compliance-text">
           <p>
-            <strong>Data Privacy & Ad Disclosure:</strong> We use cookies and tracking technologies (Google Analytics & Meta Pixel) to improve your experience and show relevant ads. By using this site or submitting the form, you agree to our collection of data as per our Privacy Policy. You can opt-out of interest-based advertising via your browser settings or <a href="https://www.aboutads.info/choices" target="_blank" rel="noreferrer">AdChoices</a>.
+            <strong>Data Privacy & Ad Disclosure:</strong> We use cookies and tracking technologies (Google Analytics & Meta Pixel) to improve your experience and show relevant ads. By using this site, submitting the form, or **initiating a chat via WhatsApp**, you agree to our collection of data (including your name, mobile number, and contact details) as per our Privacy Policy. This data is used solely for seminar registration and medical education counselling purposes.
           </p>
           <p>
-            This site is not a part of the Meta website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Meta in any way. FACEBOOK is a trademark of META Platforms, Inc.
+            You can opt-out of interest-based advertising via your browser settings or <a href="https://www.aboutads.info/choices" target="_blank" rel="noreferrer">AdChoices</a>. For WhatsApp, you can stop receiving messages at any time by replying "STOP".
+          </p>
+          <p>
+            This site is not a part of the Meta website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Meta in any way. FACEBOOK and WHATSAPP are trademarks of META Platforms, Inc.
           </p>
         </div>
       </div>
