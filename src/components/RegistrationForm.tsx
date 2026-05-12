@@ -19,16 +19,12 @@ const states = [
   'Dadra and Nagar Haveli and Daman and Diu', 'Delhi NCR', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
 ];
 
-const cities = ['Bangalore', 'Davanagere', 'Hubballi', 'Kalaburagi', 'Vijayapura'];
+const cities = ['Mangaluru'];
 const examYears = ['NEET 2026', 'NEET 2027', 'NEET 2028', 'Already Appeared'];
 const courses = ['MBBS Abroad', 'MBBS India', 'Scholarship Guidance', 'Admission Support', 'Not Sure Yet'];
 
 const cityVenues: Record<string, { venue: string, address: string, date: string, time: string }> = {
-  'Bangalore': { venue: 'Bangalore Seminar Venue', address: 'Bangalore, Karnataka', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
-  'Davanagere': { venue: 'Athani PU College', address: 'SS Layout A Block, Davanagere', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
-  'Hubballi': { venue: 'Medha PU Science College', address: 'Empire Square, Shirur Park, Hubballi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
-  'Kalaburagi': { venue: 'Shree Vidya PU College', address: 'SB Temple Road, Kalaburagi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
-  'Vijayapura': { venue: 'Chetana PU College', address: 'Gangapuram Colony, Vijayapura', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM' },
+  'Mangaluru': { venue: 'Hotel Deepa Comforts', address: 'MG Rd, Kodailbail, Mangaluru, Karnataka 575003', date: 'Sunday, 17th May', time: '10 AM Onwards' },
 };
 
 function CustomDropdown({ 
@@ -131,7 +127,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
     mobileNumber: '',
     emailAddress: '',
     state: '',
-    preferredCity: '',
+    preferredCity: 'Mangaluru',
     neetExamYear: '',
     interestedCourse: '',
     message: '',
@@ -186,8 +182,9 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
 
     const payload = {
       ...formData,
+      preferredCity: formData.preferredCity || 'Mangaluru',
       ticketId: newTicketId,
-      eventName: 'Mega MBBS Seminar 2026',
+      eventName: 'MBBS Dream Mega MBBS Seminar - Mangaluru',
       registrationType: 'free_seat_reservation',
       source: 'landing_page',
       createdAt: new Date().toISOString(),
@@ -219,7 +216,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
   };
 
   if (success) {
-    const venueInfo = cityVenues[formData.preferredCity] || cityVenues['Davanagere'];
+    const venueInfo = cityVenues[formData.preferredCity] || cityVenues['Mangaluru'];
 
     return (
       <div className={cn('registration-success', variant === 'dark' && 'registration-success-dark', className)}>
@@ -235,7 +232,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
             <div className="ticket-header">
               <div className="ticket-logo">
                 <Ticket size={24} />
-                <span>MEGA MBBS SEMINAR 2026</span>
+                <span>MBBS DREAM MEGA MBBS SEMINAR</span>
               </div>
               <div className="ticket-id">
                 <small>HALL TICKET NO.</small>
@@ -314,7 +311,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
           </button>
           
           <a
-            href={`https://wa.me/9118002701015?text=${encodeURIComponent(`Hi, I registered for Mega MBBS Seminar 2026. My ticket ID is ${ticketId}.`)}`}
+            href={`https://wa.me/917899919917?text=${encodeURIComponent(`Hi, I registered for MBBS Dream Mega MBBS Seminar Mangaluru. My ticket ID is ${ticketId}.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp w-full"

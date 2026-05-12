@@ -1,55 +1,30 @@
-# Mega MBBS Seminar 2026 - GEO & Local Search Context
+# MBBS Dream Mega MBBS Seminar - GEO & Local Search Context
 
-This document provides geographic and local context for LLMs and search engines regarding the Mega MBBS Seminar 2026.
+This document provides geographic and local context for LLMs and search engines regarding the Doctor Dreams MBBS Dream Mega MBBS Seminar in Mangaluru.
 
 ## Event Overview
-The Mega MBBS Seminar 2026 is a series of free educational guidance sessions for NEET aspirants and their parents, focusing on medical admissions in India and abroad.
+The MBBS Dream Mega MBBS Seminar is an educational guidance event for NEET aspirants and parents, focused on MBBS admission guidance, affordable fee planning, NMC & WHO recognized universities, and top government medical universities.
 
-## Primary Locations (Karnataka, India)
+## Primary Location
 
-### 1. Davanagere
-- **Venue:** Athani PU College
-- **Address:** SS Layout A Block, Davanagere, Karnataka 577004
-- **Date:** Sunday, 10th May 2026
-- **Time:** 10:00 AM – 03:00 PM
-- **Coordinates:** 14.4673, 75.9218
-
-### 2. Hubballi
-- **Venue:** Medha PU Science College
-- **Address:** Empire Square, Shirur Park, Hubballi, Karnataka 580021
-- **Date:** Sunday, 10th May 2026
-- **Time:** 10:00 AM – 03:00 PM
-- **Coordinates:** 15.3647, 75.1240
-
-### 3. Kalaburagi
-- **Venue:** Shree Vidya PU College
-- **Address:** SB Temple Road, Kalaburagi, Karnataka 585101
-- **Date:** Sunday, 10th May 2026
-- **Time:** 10:00 AM – 03:00 PM
-- **Coordinates:** 17.3297, 76.8343
-
-### 4. Vijayapura
-- **Venue:** Chetana PU College
-- **Address:** Gangapuram Colony, Vijayapura, Karnataka 586101
-- **Date:** Sunday, 10th May 2026
-- **Time:** 10:00 AM – 03:00 PM
-- **Coordinates:** 16.8302, 75.7100
-
-## Geographic Target
-- **Primary State:** Karnataka (IN-KA)
-- **Region:** South India
-- **Focus:** Tier-2 and Tier-3 cities in Karnataka with high concentrations of NEET coaching centers and PU colleges.
+### Mangaluru
+- **Venue:** Hotel Deepa Comforts
+- **Address:** MG Rd, Kodailbail, Mangaluru, Karnataka 575003
+- **Date:** Sunday, 17th May 2026
+- **Time:** 10 AM onwards
+- **Region:** Coastal Karnataka, India
 
 ## Local Relevance Keywords
-- MBBS Seminar Davanagere
-- Medical Counselling Hubballi
-- NEET Guidance Kalaburagi
-- Best MBBS abroad consultant Karnataka
-- Free MBBS seminar Vijayapura
-- Athani PU College seminar
-- Medha Science College event
+- MBBS Dream Mangaluru
+- Mega MBBS Seminar Mangaluru
+- Doctor Dreams Mangaluru seminar
+- MBBS admission guidance Mangaluru
+- NEET guidance Mangaluru
+- Medical university guidance Karnataka
+- Hotel Deepa Comforts MBBS seminar
 
 ## Contact & Helpline
-- **Helpline:** 1800 270 1015
-- **WhatsApp:** +91 1800 270 1015
+- **Primary Contact:** +91 7899 919 917
+- **Toll Free:** 1800 270 1015
+- **WhatsApp:** +91 7899 919 917
 - **Website:** https://megambbsseminar.com/

@@ -36,9 +36,10 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { RegistrationForm } from './components/RegistrationForm';
 
-const HELPLINE = '18002701015';
-const WHATSAPP_NUMBER = '9118002701015';
-const whatsappText = encodeURIComponent('Hi, I want to register for the free Mega MBBS Seminar 2026.');
+const HELPLINE = '7899919917';
+const TOLL_FREE = '18002701015';
+const WHATSAPP_NUMBER = '917899919917';
+const whatsappText = encodeURIComponent('Hi, I want to register for the MBBS Dream Mega MBBS Seminar in Mangaluru on 17th May.');
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`;
 
 function scrollToRegistration() {
@@ -55,6 +56,18 @@ function MedicalEmblem({ className = '' }: { className?: string }) {
   );
 }
 
+function BrandLogo({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className={compact ? 'brand-logo brand-logo-compact' : 'brand-logo'}>
+      <MedicalEmblem />
+      <div>
+        <strong>Doctor Dreams</strong>
+        <span>MBBS Dream</span>
+      </div>
+    </div>
+  );
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = ['Home', 'Speakers', 'Why Join', 'Cities', 'Agenda', 'FAQ', 'Contact'];
@@ -62,8 +75,8 @@ function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="header-logo" href="#home" aria-label="Mega MBBS Seminar 2026 home">
-          <MedicalEmblem />
+        <a className="header-logo" href="#home" aria-label="Doctor Dreams MBBS Dream seminar home">
+          <BrandLogo compact />
         </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -116,12 +129,12 @@ function Header() {
 }
 
 function HeroSection() {
-  const eventBadges = ['Free Entry', 'Multiple Cities', 'Expert Guidance', 'Parent Counselling'];
+  const eventBadges = ['17th May Sunday', '10 AM Onwards', 'Hotel Deepa Comforts', 'Mangaluru'];
   const trustItems = [
-    { icon: Users, label: 'Meet Top Experts' },
-    { icon: HeartHandshake, label: 'One-to-One Counselling' },
-    { icon: BadgeCheck, label: 'Scholarship Guidance' },
-    { icon: School, label: 'University Selection Support' },
+    { icon: CircleDollarSign, label: 'Affordable Fee Guidance' },
+    { icon: Globe2, label: 'NMC & WHO Recognized Universities' },
+    { icon: BadgeCheck, label: 'Medical Seat Roadmap' },
+    { icon: School, label: 'Top Government Universities' },
   ];
 
   return (
@@ -134,13 +147,14 @@ function HeroSection() {
           transition={{ duration: 0.45 }}
         >
           <h1>
-            <span>Mega MBBS</span>
-            <strong>Seminar 2026</strong>
+            <small>Fly High With Your</small>
+            <span>MBBS</span>
+            <strong>Dream</strong>
           </h1>
-          <h2>Free MBBS Guidance Seminar<br />for NEET Aspirants & Parents</h2>
+          <h2>MBBS Dream Mega MBBS Seminar<br />Mangaluru</h2>
           <p>
-            Meet India’s leading experts, university representatives, and alumni. Understand MBBS options,
-            admission process, fees, scholarships, hostel, safety, and career roadmap — all under one roof.
+            Get complete guidance on top government medical universities, affordable fee options, recognized
+            universities, admission process, documentation, hostel, safety, and career roadmap.
           </p>
 
           <div className="badge-row">
@@ -188,14 +202,14 @@ function HeroSection() {
           <div className="form-card-top">
             <MedicalEmblem className="emblem-on-dark" />
             <div className="event-points">
-              {['Free Entry', 'Expert Guidance', 'Parent Counselling', 'Limited Seats', 'Multiple Cities'].map((item) => (
+              {['Affordable Fee', 'NMC & WHO Recognized', '17th May Sunday', '10 AM Onwards', 'Hotel Deepa Comforts'].map((item) => (
                 <span key={item}><CheckCircle2 size={13} /> {item}</span>
               ))}
             </div>
             <div className="gold-arc" />
             <img
-              src="/images/hero-medical-students.png"
-              alt="Medical students studying"
+              src="/images/mangaluru-event-flyer.jpg"
+              alt="MBBS Dream Mangaluru seminar flyer"
               fetchPriority="high"
             />
           </div>
@@ -219,20 +233,20 @@ function SectionTitle({ children, gold }: { children: string; gold: string }) {
 
 function BenefitCards() {
   const benefits = [
-    { icon: Globe2, title: 'NRI MBBS Seat Options' },
-    { icon: Building2, title: 'Best Universities Selection & Fees' },
-    { icon: CircleDollarSign, title: 'Scholarship & Financial Guidance' },
+    { icon: CircleDollarSign, title: 'Affordable Fee Planning' },
+    { icon: Globe2, title: 'NMC & WHO Recognized Universities' },
+    { icon: Building2, title: 'Top Government Medical Universities' },
     { icon: ClipboardCheck, title: 'NEET Eligibility & Admission Process' },
-    { icon: Plane, title: 'Visa, Documentation & Travel Support' },
+    { icon: Plane, title: 'From Dream to Degree Roadmap' },
     { icon: Home, title: 'Hostel, Safety, Food & Student Life' },
-    { icon: Stethoscope, title: 'MBBS in India vs Abroad' },
-    { icon: Users, title: 'Parent Counselling & Career Roadmap' },
+    { icon: Stethoscope, title: 'MBBS Career Guidance' },
+    { icon: Users, title: 'Parent Counselling & Seat Planning' },
   ];
 
   return (
     <section id="why-join" className="section benefits-section">
       <div className="container">
-        <SectionTitle gold="Free Seminar">What You Will Learn in This Free Seminar</SectionTitle>
+        <SectionTitle gold="MBBS Seminar">What You Will Learn in This MBBS Seminar</SectionTitle>
         <div className="benefits-grid">
           {benefits.map(({ icon: Icon, title }) => (
             <motion.div className="benefit-card" key={title} whileHover={{ y: -5 }}>
@@ -260,7 +274,7 @@ function WhyAttend() {
     <section className="why-section">
       <div className="container">
         <div className="why-card">
-          <h2>Before You Choose Any MBBS University,<br />Attend This <span>Free Seminar</span></h2>
+          <h2>Before You Choose Any MBBS University,<br />Attend This <span>Mangaluru Seminar</span></h2>
           <div className="why-points">
             {points.map(({ icon: Icon, text }) => (
               <div key={text} className="why-point">
@@ -306,17 +320,14 @@ function DoctorProfiles() {
 
 function VenueCards() {
   const venues = [
-    { city: 'Davanagere', venue: 'Athani PU College', address: 'SS Layout A Block, Davanagere', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-davanagere-athani-college.png' },
-    { city: 'Hubballi', venue: 'Medha PU Science College', address: 'Empire Square, Shirur Park, Hubballi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-hubballi-medha-college.png' },
-    { city: 'Kalaburagi', venue: 'Shree Vidya PU College', address: 'SB Temple Road, Kalaburagi', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-kalaburagi-shree-vidya.png' },
-    { city: 'Vijayapura', venue: 'Chetana PU College', address: 'Gangapuram Colony, Vijayapura', date: 'Sun, 10th May', time: '10:00 AM – 03:00 PM', img: '/images/venue-vijayapura-chetana-college.png' },
+    { city: 'Mangaluru', venue: 'Hotel Deepa Comforts', address: 'MG Rd, Kodailbail, Mangaluru, Karnataka 575003', date: 'Sunday, 17th May', time: '10 AM Onwards', img: '/images/mangaluru-event-flyer.jpg' },
   ];
 
   return (
     <section id="cities" className="section venues-section">
       <div className="container">
-        <SectionTitle gold="Seminar City">Choose Your Seminar City</SectionTitle>
-        <div className="venue-grid">
+        <SectionTitle gold="Mangaluru">Seminar City: Mangaluru</SectionTitle>
+        <div className="venue-grid single-event-grid">
           {venues.map((venue) => (
             <article className="venue-card" key={venue.city}>
               <div className="venue-image">
@@ -332,7 +343,7 @@ function VenueCards() {
                 <a className="btn btn-map venue-btn" href={`https://maps.google.com/?q=${encodeURIComponent(`${venue.venue} ${venue.city}`)}`} target="_blank" rel="noreferrer">
                   <MapPin size={14} /> Open Map
                 </a>
-                <strong>Open for NEET 2026 / NEET 2027</strong>
+                <strong>17th May Sunday · 10 AM Onwards</strong>
               </div>
             </article>
           ))}
@@ -344,17 +355,14 @@ function VenueCards() {
 
 function PosterSection() {
   const posters = [
-    { city: 'Davanagere', img: '/images/poster-davanagere.jpeg', description: 'Join us at Athani PU College for comprehensive MBBS guidance.' },
-    { city: 'Hubballi', img: '/images/poster-hubballi.jpeg', description: 'Expert counselling session at Medha PU Science College.' },
-    { city: 'Kalaburagi', img: '/images/poster-kalaburagi.jpeg', description: 'Explore global medical careers at Shree Vidya PU College.' },
-    { city: 'Vijayapura', img: '/images/poster-vijayapura.jpeg', description: 'Secure your medical future at Chetana PU College.' },
+    { city: 'Mangaluru', img: '/images/mangaluru-event-flyer.jpg', description: 'Join Doctor Dreams at Hotel Deepa Comforts for complete MBBS guidance on top government medical universities.' },
   ];
 
   return (
     <section className="section posters-section">
       <div className="container">
-        <SectionTitle gold="Seminar Posters">Official Seminar Posters</SectionTitle>
-        <div className="poster-grid">
+        <SectionTitle gold="Event Flyer">Official Mangaluru Event Flyer</SectionTitle>
+        <div className="poster-grid single-poster-grid">
           {posters.map((poster) => (
             <motion.div className="poster-card" key={poster.city} whileHover={{ scale: 1.02 }}>
               <div className="poster-image">
@@ -383,12 +391,12 @@ function FreeGuidanceCTA() {
             <Globe2 size={36} />
           </div>
           <div>
-            <h2>Get Free MBBS Admission Guidance Anytime</h2>
-            <p>Book your free counselling slot and understand your MBBS options with expert guidance.</p>
-            <small>Guidance is free. Final admission depends on eligibility, documentation, university rules, and seat availability.</small>
+            <h2>Get Complete Guidance on Top Government Medical Universities</h2>
+            <p>Book your Mangaluru seminar pass and understand your MBBS options with Doctor Dreams guidance.</p>
+            <small>For more info contact 7899 919 917 / 1800 270 1015. Final admission depends on eligibility, documentation, university rules, and seat availability.</small>
           </div>
           <button className="btn btn-gold btn-large" onClick={scrollToRegistration}>
-            Book Free Counselling <ArrowRight size={17} />
+            Book Seminar Pass <ArrowRight size={17} />
           </button>
         </div>
       </div>
@@ -399,13 +407,13 @@ function FreeGuidanceCTA() {
 function AgendaTimeline() {
   const items = [
     { icon: ClipboardCheck, label: 'Welcome & Registration' },
-    { icon: Stethoscope, label: 'MBBS in India vs Abroad' },
-    { icon: School, label: 'Top Universities Guide' },
-    { icon: CircleDollarSign, label: 'Education Loan & Scholarship Options' },
-    { icon: Plane, label: 'Abroad MBBS Process Explained' },
-    { icon: Users, label: 'Meet University Experts' },
+    { icon: CircleDollarSign, label: 'Affordable Fee Options' },
+    { icon: Globe2, label: 'NMC & WHO Recognition' },
+    { icon: School, label: 'Top Government Universities' },
+    { icon: Plane, label: 'MBBS Dream Roadmap' },
+    { icon: Users, label: 'Parent Counselling' },
     { icon: MessageCircle, label: 'Q&A Session' },
-    { icon: HeartHandshake, label: 'Free Counselling Support' },
+    { icon: HeartHandshake, label: 'Seat Planning Support' },
   ];
 
   return (
@@ -478,7 +486,7 @@ function FinalCTA() {
     <section id="contact" className="final-cta-section">
       <div className="container final-cta">
         <div>
-          <h2>Ready to Take the First Step<br />Toward <span>Becoming a Doctor?</span></h2>
+          <h2>Ready to Fly High With Your<br /><span>MBBS Dream?</span></h2>
           <div className="final-buttons">
             <button className="btn btn-gold btn-large" onClick={scrollToRegistration}>
               Book a Free Pass <ArrowRight size={17} />
@@ -489,12 +497,14 @@ function FinalCTA() {
             <a className="btn btn-white btn-large" href={`tel:${HELPLINE}`}>
               <Phone size={18} /> Call Now
             </a>
+            <a className="btn btn-white btn-large" href={`tel:${TOLL_FREE}`}>
+              <Phone size={18} /> Toll Free
+            </a>
           </div>
           <p className="cta-note cta-note-dark">By clicking, you agree to our Privacy Policy & data collection via WhatsApp.</p>
         </div>
         <div className="final-doctors">
-          <img src="/images/dr-komal-r.jpeg" alt="Dr. Komal R" loading="lazy" />
-          <img src="/images/dr-isha-jadon.jpeg" alt="Dr. Isha Jadon" loading="lazy" />
+          <img src="/images/mangaluru-event-flyer.jpg" alt="MBBS Dream Mangaluru seminar" loading="lazy" />
         </div>
       </div>
     </section>
@@ -509,9 +519,9 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <MedicalEmblem className="emblem-on-dark" />
+          <BrandLogo compact />
           <p className="footer-disclaimer">
-            <strong>Disclaimer:</strong> This seminar is for education counselling only. We do not provide direct medical advice or guarantee admissions. Final admission depends on student eligibility, NEET scores, documentation, university rules, and seat availability in India or Abroad.
+            <strong>Disclaimer:</strong> Doctor Dreams MBBS Dream seminar is for education counselling only. We do not provide direct medical advice or guarantee admissions. Final admission depends on student eligibility, NEET scores, documentation, university rules, and seat availability in India or Abroad.
           </p>
         </div>
         <div>
@@ -550,7 +560,7 @@ function Footer() {
 
       <div className="container footer-bottom">
         <div className="footer-copyright">
-          © 2026 Mega MBBS Seminar. All Rights Reserved.
+          © 2026 Doctor Dreams MBBS Dream Seminar. All Rights Reserved.
         </div>
         <div className="footer-legal">
           <a href="#home">Privacy Policy</a>
