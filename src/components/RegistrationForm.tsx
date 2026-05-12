@@ -184,7 +184,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
       ...formData,
       preferredCity: formData.preferredCity || 'Mangaluru',
       ticketId: newTicketId,
-      eventName: 'MBBS Dream Mega MBBS Seminar - Mangaluru',
+      eventName: 'Mega MBBS Seminar - Mangaluru',
       registrationType: 'free_seat_reservation',
       source: 'landing_page',
       createdAt: new Date().toISOString(),
@@ -232,7 +232,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
             <div className="ticket-header">
               <div className="ticket-logo">
                 <Ticket size={24} />
-                <span>MBBS DREAM MEGA MBBS SEMINAR</span>
+                <span>MEGA MBBS SEMINAR</span>
               </div>
               <div className="ticket-id">
                 <small>HALL TICKET NO.</small>
@@ -311,7 +311,7 @@ export function RegistrationForm({ className, variant = 'light' }: RegistrationF
           </button>
           
           <a
-            href={`https://wa.me/917899919917?text=${encodeURIComponent(`Hi, I registered for MBBS Dream Mega MBBS Seminar Mangaluru. My ticket ID is ${ticketId}.`)}`}
+            href={`https://wa.me/917899919917?text=${encodeURIComponent(`Hi, I registered for Mega MBBS Seminar Mangaluru. My ticket ID is ${ticketId}.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp w-full"

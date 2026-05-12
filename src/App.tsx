@@ -39,7 +39,7 @@ import { RegistrationForm } from './components/RegistrationForm';
 const HELPLINE = '7899919917';
 const TOLL_FREE = '18002701015';
 const WHATSAPP_NUMBER = '917899919917';
-const whatsappText = encodeURIComponent('Hi, I want to register for the MBBS Dream Mega MBBS Seminar in Mangaluru on 17th May.');
+const whatsappText = encodeURIComponent('Hi, I want to register for the Mega MBBS Seminar in Mangaluru on 17th May.');
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`;
 
 function scrollToRegistration() {
@@ -61,8 +61,8 @@ function BrandLogo({ compact = false }: { compact?: boolean }) {
     <div className={compact ? 'brand-logo brand-logo-compact' : 'brand-logo'}>
       <MedicalEmblem />
       <div>
-        <strong>Doctor Dreams</strong>
-        <span>MBBS Dream</span>
+        <strong>Mega MBBS</strong>
+        <span>Seminar</span>
       </div>
     </div>
   );
@@ -75,7 +75,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="header-logo" href="#home" aria-label="Doctor Dreams MBBS Dream seminar home">
+        <a className="header-logo" href="#home" aria-label="Mega MBBS Seminar home">
           <BrandLogo compact />
         </a>
 
@@ -149,9 +149,9 @@ function HeroSection() {
           <h1>
             <small>Fly High With Your</small>
             <span>MBBS</span>
-            <strong>Dream</strong>
+            <strong>Future</strong>
           </h1>
-          <h2>MBBS Dream Mega MBBS Seminar<br />Mangaluru</h2>
+          <h2>Mega MBBS Seminar<br />Mangaluru</h2>
           <p>
             Get complete guidance on top government medical universities, affordable fee options, recognized
             universities, admission process, documentation, hostel, safety, and career roadmap.
@@ -209,7 +209,7 @@ function HeroSection() {
             <div className="gold-arc" />
             <img
               src="/images/mangaluru-event-flyer.jpg"
-              alt="MBBS Dream Mangaluru seminar flyer"
+              alt="Mega MBBS Seminar Mangaluru event flyer"
               fetchPriority="high"
             />
           </div>
@@ -355,7 +355,7 @@ function VenueCards() {
 
 function PosterSection() {
   const posters = [
-    { city: 'Mangaluru', img: '/images/mangaluru-event-flyer.jpg', description: 'Join Doctor Dreams at Hotel Deepa Comforts for complete MBBS guidance on top government medical universities.' },
+    { city: 'Mangaluru', img: '/images/mangaluru-event-flyer.jpg', description: 'Join the Mega MBBS Seminar at Hotel Deepa Comforts for complete MBBS guidance on top government medical universities.' },
   ];
 
   return (
@@ -392,7 +392,7 @@ function FreeGuidanceCTA() {
           </div>
           <div>
             <h2>Get Complete Guidance on Top Government Medical Universities</h2>
-            <p>Book your Mangaluru seminar pass and understand your MBBS options with Doctor Dreams guidance.</p>
+            <p>Book your Mangaluru seminar pass and understand your MBBS options with expert guidance.</p>
             <small>For more info contact 7899 919 917 / 1800 270 1015. Final admission depends on eligibility, documentation, university rules, and seat availability.</small>
           </div>
           <button className="btn btn-gold btn-large" onClick={scrollToRegistration}>
@@ -410,7 +410,7 @@ function AgendaTimeline() {
     { icon: CircleDollarSign, label: 'Affordable Fee Options' },
     { icon: Globe2, label: 'NMC & WHO Recognition' },
     { icon: School, label: 'Top Government Universities' },
-    { icon: Plane, label: 'MBBS Dream Roadmap' },
+    { icon: Plane, label: 'MBBS Roadmap' },
     { icon: Users, label: 'Parent Counselling' },
     { icon: MessageCircle, label: 'Q&A Session' },
     { icon: HeartHandshake, label: 'Seat Planning Support' },
@@ -486,7 +486,7 @@ function FinalCTA() {
     <section id="contact" className="final-cta-section">
       <div className="container final-cta">
         <div>
-          <h2>Ready to Fly High With Your<br /><span>MBBS Dream?</span></h2>
+          <h2>Ready to Take the First Step<br /><span>Toward Your MBBS Journey?</span></h2>
           <div className="final-buttons">
             <button className="btn btn-gold btn-large" onClick={scrollToRegistration}>
               Book a Free Pass <ArrowRight size={17} />
@@ -504,7 +504,7 @@ function FinalCTA() {
           <p className="cta-note cta-note-dark">By clicking, you agree to our Privacy Policy & data collection via WhatsApp.</p>
         </div>
         <div className="final-doctors">
-          <img src="/images/mangaluru-event-flyer.jpg" alt="MBBS Dream Mangaluru seminar" loading="lazy" />
+          <img src="/images/mangaluru-event-flyer.jpg" alt="Mega MBBS Seminar Mangaluru" loading="lazy" />
         </div>
       </div>
     </section>
@@ -521,7 +521,7 @@ function Footer() {
         <div className="footer-brand">
           <BrandLogo compact />
           <p className="footer-disclaimer">
-            <strong>Disclaimer:</strong> Doctor Dreams MBBS Dream seminar is for education counselling only. We do not provide direct medical advice or guarantee admissions. Final admission depends on student eligibility, NEET scores, documentation, university rules, and seat availability in India or Abroad.
+            <strong>Disclaimer:</strong> Mega MBBS Seminar is for education counselling only. We do not provide direct medical advice or guarantee admissions. Final admission depends on student eligibility, NEET scores, documentation, university rules, and seat availability in India or Abroad.
           </p>
         </div>
         <div>
@@ -560,7 +560,7 @@ function Footer() {
 
       <div className="container footer-bottom">
         <div className="footer-copyright">
-          © 2026 Doctor Dreams MBBS Dream Seminar. All Rights Reserved.
+          © 2026 Mega MBBS Seminar. All Rights Reserved.
         </div>
         <div className="footer-legal">
           <a href="#home">Privacy Policy</a>

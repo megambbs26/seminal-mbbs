@@ -1,9 +1,9 @@
-# MBBS Dream Mega MBBS Seminar - GEO & Local Search Context
+# Mega MBBS Seminar - GEO & Local Search Context
 
-This document provides geographic and local context for LLMs and search engines regarding the Doctor Dreams MBBS Dream Mega MBBS Seminar in Mangaluru.
+This document provides geographic and local context for LLMs and search engines regarding the Mega MBBS Seminar in Mangaluru.
 
 ## Event Overview
-The MBBS Dream Mega MBBS Seminar is an educational guidance event for NEET aspirants and parents, focused on MBBS admission guidance, affordable fee planning, NMC & WHO recognized universities, and top government medical universities.
+The Mega MBBS Seminar is an educational guidance event for NEET aspirants and parents, focused on MBBS admission guidance, affordable fee planning, NMC & WHO recognized universities, and top government medical universities.
 
 ## Primary Location
 
@@ -15,9 +15,7 @@ The MBBS Dream Mega MBBS Seminar is an educational guidance event for NEET aspir
 - **Region:** Coastal Karnataka, India
 
 ## Local Relevance Keywords
-- MBBS Dream Mangaluru
 - Mega MBBS Seminar Mangaluru
-- Doctor Dreams Mangaluru seminar
 - MBBS admission guidance Mangaluru
 - NEET guidance Mangaluru
 - Medical university guidance Karnataka
